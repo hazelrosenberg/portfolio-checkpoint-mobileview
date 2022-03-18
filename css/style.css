@@ -9,9 +9,17 @@ nav {
     padding: 15px;
 }
 
+nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 nav li {
     display: inline-block;
-    margin: 10px 80px;
+    margin: 10px;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
@@ -112,8 +120,7 @@ footer {
     font-size: 20px;
 }
 
-#hidden,
-.skip {
+#hidden {
     display: none;
 }
 
@@ -123,12 +130,15 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-@media screen and (min-width: 609px) {
-    .basketball {
-        background-image: url(../images/basketball-court-horizontal.jpeg)
-    }
+.basketball img {
+    border-radius: 10px;
+    margin: 10px;
+    width: 90%;
 }
 
 .fa-cookie {
@@ -147,4 +157,89 @@ input {
 
 .question {
     margin: 15px;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+  .music_shoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .music_shoes img {
+    margin: 10px;
+    width: 90%;
+  }
+
+  @keyframes yay {
+      0% {background-color: auto;}
+      25% {background-color: #0f0}
+      50% {background-color: #8500ff}
+      75% {background-color: #ff5100}
+      100% {background-color: #fff}
+
+  }
+
+  form {
+      animation-name: yay;
+      animation-duration: 16s;
+      animation-iteration-count: infinite;
+  }
+
+  #animation {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+      form, 
+      #animation {
+          animation: none;
+      }
+  }
+
+  @media screen and (min-width: 609px) {
+      .basketball {
+        background-image: url(../images/basketball-court-horizontal.jpeg)
+      }
 }
