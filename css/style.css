@@ -145,6 +145,7 @@ footer {
     color: #8500ff;
 }
 
+/* Form Styling */
 label {
     display: inline-block;
     margin: 5px;
@@ -153,11 +154,21 @@ label {
 input {
     display: inline-block;
     margin: 5px;
+    padding: 5px;
+}
+
+textarea {
+    margin: 5px;
 }
 
 .question {
     margin: 15px;
 }
+
+fieldset {
+    font-size: 20px;
+}
+/* End of Form Styling */
 
 a.skip{
     background: white;
@@ -235,6 +246,11 @@ a.skip{
       form, 
       #animation {
           animation: none;
+      }
+
+      a.skip {
+        -webkit-transition: none;
+        transition: none;
       }
   }
 
