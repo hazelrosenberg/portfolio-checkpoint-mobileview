@@ -56,7 +56,6 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 main {
@@ -214,7 +213,7 @@ a.skip{
 
   }
 
-  form {
+  #yay {
       animation-name: yay;
       animation-duration: 16s;
       animation-iteration-count: infinite;
