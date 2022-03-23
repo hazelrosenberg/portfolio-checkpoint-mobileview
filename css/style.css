@@ -25,6 +25,7 @@ nav li {
     color: #fff;
     font-family: 'Archivo Narrow', sans-serif;
     text-transform: uppercase;
+    align-self: center;
 }
 
 nav a:link,
@@ -68,7 +69,8 @@ h2 {
     margin: 15px 5px;
 }
 
-p {
+p,
+figcaption {
     margin: 5px;
     font-size: 20px;
     line-height: 1.5;
@@ -136,15 +138,11 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #fff;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
 }
 
 .basketball img {
     border-radius: 10px;
     margin: 10px;
-    width: 90%;
 }
 
 .fa-cookie {
@@ -193,18 +191,6 @@ a.skip{
     text-decoration-style: solid;
   }
 
-  .music_shoes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .music_shoes img {
-    margin: 10px;
-    width: 90%;
-  }
-
   @keyframes yay {
       0% {background-color: auto;}
       33% {background-color: #0f0}
@@ -217,10 +203,6 @@ a.skip{
       animation-name: yay;
       animation-duration: 16s;
       animation-iteration-count: infinite;
-  }
-
-  #animation {
-    animation: wiggle 2s linear infinite;
   }
   
   @keyframes wiggle {
@@ -245,6 +227,37 @@ a.skip{
     40%, 100% {
       transform: rotateZ(0);
     }
+  }
+
+  #animation {
+    animation: wiggle 2s linear infinite;
+  }
+
+  .flex_gallery {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 99%;
+  }
+
+  .flex_child {
+      align-self: center;
+  }
+
+  .grid_gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .grid_gallery figure {
+      width: 95%;
+      justify-self: center;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
